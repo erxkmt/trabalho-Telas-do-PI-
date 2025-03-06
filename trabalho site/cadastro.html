@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - SUPRAcompany</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Cadastro de Usuário</h2>
+        <form>
+            <!-- Nome Completo -->
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+
+            <!-- CPF -->
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+            </div>
+
+            <!-- Data de Nascimento -->
+            <div class="mb-3">
+                <label for="data_nascimento" class="form-label">Data de Nascimento</label>
+                <input type="date" class="form-control" id="data_nascimento" required>
+            </div>
+
+            <!-- Celular -->
+            <div class="mb-3">
+                <label for="celular" class="form-label">Celular</label>
+                <input type="tel" class="form-control" id="celular" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <!-- Endereço -->
+            <h4 class="mt-4">Endereço</h4>
+            <div class="mb-3">
+                <label for="rua" class="form-label">Rua</label>
+                <input type="text" class="form-control" id="rua" required>
+            </div>
+            <div class="mb-3">
+                <label for="bairro" class="form-label">Bairro</label>
+                <input type="text" class="form-control" id="bairro" required>
+            </div>
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" required>
+            </div>
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado" required>
+                    <option value="">Selecione um estado</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="BA">Bahia</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="CE">Ceará</option>
+                    <option value="GO">Goiás</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="00000-000" required>
+            </div>
+
+            <!-- E-mail -->
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <!-- Senha e Confirmação -->
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmar_senha" class="form-label">Confirmação de Senha</label>
+                <input type="password" class="form-control" id="confirmar_senha" required>
+            </div>
+
+            <!-- Tipo de Usuário -->
+            <div class="mb-3">
+                <label for="tipo_usuario" class="form-label">Tipo de Usuário</label>
+                <select class="form-select" id="tipo_usuario" required>
+                    <option value="">Selecione o tipo</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Funcionario">Funcionário</option>
+                    <option value="Cliente">Cliente</option>
+                </select>
+            </div>
+
+            <!-- Botão Cadastrar -->
+            <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+
+            <!-- Botão Voltar para Página Inicial -->
+            <div class="text-center mt-3">
+                <a href="index.html" class="btn btn-outline-secondary w-100">Voltar para Página Inicial</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

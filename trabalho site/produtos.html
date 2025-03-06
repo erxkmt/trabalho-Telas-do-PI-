@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listagem de Produtos - SUPRAcompany</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script>
+        function filtrarProdutos() {
+            let input = document.getElementById("pesquisa");
+            let filtro = input.value.toLowerCase();
+            let linhas = document.querySelectorAll("#tabela-produtos tbody tr");
+
+            linhas.forEach((linha) => {
+                let nomeProduto = linha.cells[0].textContent.toLowerCase();
+                if (nomeProduto.includes(filtro)) {
+                    linha.style.display = "";
+                } else {
+                    linha.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SUPRAcompany</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastre-se</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Lista de Produtos</h2>
+
+        <!-- Campo de Pesquisa -->
+        <div class="mb-3">
+            <input type="text" id="pesquisa" class="form-control" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+        </div>
+
+        <!-- Botão Adicionar Novo Produto -->
+        <div class="mb-3 text-end">
+            <a href="cadastro-produto.html" class="btn btn-success">Adicionar Novo Produto</a>
+        </div>
+
+        <!-- Tabela de Produtos -->
+        <table class="table table-striped" id="tabela-produtos">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mack Polo Domination</td>
+                    <td>R$ 189,90</td>
+                    <td>15</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Island Baggy Jeans</td>
+                    <td>R$ 199,90</td>
+                    <td>10</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Raglan Work JACKETT CLASS</td>
+                    <td>R$ 649,90</td>
+                    <td>5</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tênis Nike Air Max Plus</td>
+                    <td>R$ 1.199,90</td>
+                    <td>8</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Boné Ed Hardy</td>
+                    <td>R$ 279,90</td>
+                    <td>20</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Editar</button>
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; 2025 SUPRAcompany - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
